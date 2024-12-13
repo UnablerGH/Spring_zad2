@@ -1,8 +1,12 @@
 // Product.java
-package com.example.productmanagement.entity;
+package com.example.productmanagement.product;
 
+import com.example.productmanagement.category.Category;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data

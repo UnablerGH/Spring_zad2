@@ -1,7 +1,5 @@
-package com.example.productmanagement.controller;
+package com.example.productmanagement.product;
 
-import com.example.productmanagement.entity.Product;
-import com.example.productmanagement.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

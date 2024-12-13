@@ -1,7 +1,5 @@
-package com.example.productmanagement.service;
+package com.example.productmanagement.category;
 
-import com.example.productmanagement.entity.Category;
-import com.example.productmanagement.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
