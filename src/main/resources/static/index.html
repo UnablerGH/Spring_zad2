@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Product Management</h1>
+<div id="content">
+    <h2>Products</h2>
+    <button onclick="showProductForm()">Add Product</button>
+    <table id="product-table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Weight [kg]</th>
+            <th>Price [PLN]</th>
+            <th>Category</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Product rows will be added here dynamically -->
+        </tbody>
+    </table>
+
+    <h2>Categories</h2>
+    <button onclick="showCategoryForm()">Add Category</button>
+    <table id="category-table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Category rows will be added here dynamically -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Product Form Modal -->
+<div id="product-form-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeProductForm()">&times;</span>
+        <h2>Add Product</h2>
+        <form id="product-form">
+            <label for="product-name">Name:</label>
+            <input type="text" id="product-name" name="name" required>
+            <label for="product-weight">Weight:</label>
+            <input type="number" id="product-weight" name="weight" step="0.01" required>
+            <label for="product-price">Price:</label>
+            <input type="number" id="product-price" name="price" step="0.01" required>
+            <label for="product-index">Index:</label>
+            <input type="number" id="product-index" name="index" required>
+            <label for="product-category">Category:</label>
+            <select id="product-category" name="category" required>
+                <!-- Category options will be added here dynamically -->
+            </select>
+            <button type="submit">Add Product</button>
+        </form>
+    </div>
+</div>
+
+<!-- Category Form Modal -->
+<div id="category-form-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCategoryForm()">&times;</span>
+        <h2>Add Category</h2>
+        <form id="category-form">
+            <label for="category-name">Name:</label>
+            <input type="text" id="category-name" name="name" required>
+            <label for="category-code">Code:</label>
+            <input type="text" id="category-code" name="code" required>
+            <button type="submit">Add Category</button>
+        </form>
+    </div>
+</div>
+<script src="scripts.js"></script>
+</body>
+</html>
